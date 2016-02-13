@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page</title>
+    <style>
+      fieldset{ background: lightyellow;
+                margin-bottom: 10px;
+                border: 10px solid yellow;
+                width: 720px
+              }
+      label{ width: 180px;
+             display: inline-block;
+             vertical-align: top;
+             text-align: right
+           }
+      textarea{ width: 360px;
+                height: 50px
+              }
+      legend{font-size: 20px}
+      span{ color: white;
+            display: inline-block;
+            width: 55px;
+            height: 23px;
+            text-align: center;
+            vertical-align: top
+          }
+      .col-bro{background-color: brown}
+      .col-pur{background-color: purple}
+      label:hover{font-size: 20px}
+    </style>
+  </head>
+  <body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+    <div>
+      <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Your Face</legend>
+          <label for="image">Your image:</label>
+          <input type="file" id="image" name="image" required/>
+          <br/>
+          <label for="preview">Image preview:</label>
+          <img id="preview" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Your General Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+          <br/>
+          <label for="gender">Gender:</label>
+          <input type="radio" id="gender" name="gender" value="male" required>Male
+          <input type="radio" id="gender"name="gender" value="female">Female
+          <br/>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="0" max="99" required />
+          <br/>
+          <label for="birth">Date of birth:</label>
+          <input type="date" id="birth" name="birth" />
+          <br/>
+          <label for="favcol">Favourite color:</label>
+          <input type="color" id="favcol" name="favcolor" />
+          <br/>
+          <label for="country">Which country:</label>
+          <select id="country" name="country">
+            <option value="n0"></option>
+            <option value="n1">England</option>
+            <option value="n2">France</option>
+            <option value="n3">Germany</option>
+            <option value="n4">Italy</option>
+            <option value="n5">Sweden</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Indicators</legend>
+          <label for="height">Height:</label>
+          <span class="col-bro">Short</span>
+          <input type="range" id="height" name="height" min="0" max="100" value="50" />
+          <span class="col-pur">Tall</span>
+          <br/>
+          <label for="salary">Salary:</label>
+          <span class="col-bro">Poor</span>
+          <input type="range" id="salary" name="salary" min="0" max="100" value="50" />
+          <span class="col-pur">Rich</span>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br>
+          <label for="mobile">Mobile:</label>
+          <input type="tel" id="mobile" name="mobile" />
+          <br>
+          <label for="address">Address:</label>
+          <textarea id="address" name="address"></textarea>
+          <br>
+          <label for="contact">Method to contact you:</label>
+          <input type="checkbox" id="contact" name="contact" value="email">Email
+          <input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
+          <input type="checkbox" id="contact" name="contact" value="inapp">In-app chat
+        </fieldset>
+
+        <input type="submit" value="Send">
+      </form>
+    </div>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </body>
+</html>
